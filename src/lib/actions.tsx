@@ -8,8 +8,8 @@ import { error } from 'console'
 
 type ContactFormInputs = z.infer<typeof ContactFormSchema>
 
-// const resend = new Resend(process.env.RESEND_API_KEY)
-const resend = new Resend("re_12u3GDCn_DswRyu62CrdwiiHNGsFXzchV")
+const resend = new Resend(process.env.RESEND_API_KEY)
+
 
 export async function sendEmail(data: ContactFormInputs){
     const result = ContactFormSchema.safeParse(data)
