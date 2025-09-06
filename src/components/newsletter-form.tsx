@@ -5,11 +5,10 @@ import {zodResolver} from '@hookform/resolvers/zod';
 import { SubmitHandler, useForm} from 'react-hook-form'; 
 import { Button } from './ui/button';
 import { Input } from './ui/input';
-import {Textarea} from './ui/textarea';
 import { toast } from 'sonner';
 import { NewsletterFormSchema } from '@/lib/schemas';
 import Link from 'next/link';
-import { sendEmail,subscribe } from '@/lib/actions';
+import { subscribe } from '@/lib/actions';
 import { Card, CardContent } from './ui/card';
 
 

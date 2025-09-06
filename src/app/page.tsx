@@ -1,6 +1,4 @@
-import Image from "next/image";
 import Intro from "../components/intro";
-import {MDXRemote} from 'next-mdx-remote/rsc'
 import RecentPosts from "@/components/recent-posts";
 import RecentProjects from "@/components/recent-projects";
 import NewsletterForm from "@/components/newsletter-form";

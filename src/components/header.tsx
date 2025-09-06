@@ -7,7 +7,7 @@ export default function Header(){
             <nav className="container px-4 mx-auto flex max-w-3xl items-center justify-between">
                 <div>
                     <Link href="/" className="text-2xl font-bold">
-                        Alex's Portfolio
+                        Alex&apos;s Portfolio
                     </Link>
                 </div>
 

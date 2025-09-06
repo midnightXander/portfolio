@@ -4,7 +4,6 @@ import {z} from 'zod'
 import { ContactFormSchema, NewsletterFormSchema } from './schemas'
 import { Resend } from 'resend'
 import ContactFormEmail from '../../emails/contact-form-email'
-import { error } from 'console'
 
 type ContactFormInputs = z.infer<typeof ContactFormSchema>
 
@@ -26,7 +25,7 @@ export async function sendEmail(data: ContactFormInputs){
             cc: ['alexngaikama913@gmail.com'],
             subject: 'Contact Form submission',
             text: `Name: ${name}\nEmail: ${ email }\nMessage: ${ message }`,
-            react: ContactFormEmail({ name, email, message })
+            react: await ContactFormEmail({ name, email, message })
         })
 
         if(!data || error){

@@ -1,5 +1,4 @@
 import { getAllProjects } from "@/lib/projects";
-import projects from "./projects";
 import Link from "next/link";
 import Projects from "./projects";
 

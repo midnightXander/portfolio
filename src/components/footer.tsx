@@ -58,7 +58,7 @@ export default function Footer(){
                     ))}
                     </div>
                     <div className="mt-8 md:order-1 md:mt-8">
-                        <p className="text-sm text-muted-foreground mb-4 md:mb-0">&copy; {new Date().getFullYear()} Alex's Portfolio. All rights reserved.</p>
+                        <p className="text-sm text-muted-foreground mb-4 md:mb-0">&copy; {new Date().getFullYear()} Alex&apos;s Portfolio. All rights reserved.</p>
                     </div>
                 </div>
             </div>

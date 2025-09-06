@@ -3,8 +3,8 @@ import { MDXRemote, MDXRemoteProps } from "next-mdx-remote/rsc";
 import { highlight } from 'sugar-high'
 import Counter from "./counter";
 
-function Code({children, ...props}: any) {
-    let codeHTML = highlight(children)
+function Code({children, ...props}: any ) {
+    const codeHTML = highlight(children)
     return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
 }
 
