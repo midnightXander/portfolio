@@ -1,0 +1,11 @@
+{
+    "arrowParens": "avoid",
+    "printWidth": 100,
+    "semi": false,
+    "trailingComma": "all",
+    "tabWidth": 2,
+    "singleQuote": true,
+    "proseWrap": "always",
+    "jsxSingleQuote": true,
+    "plugins": ["prettier-plugin-tailwindcss"]
+}
