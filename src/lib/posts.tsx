@@ -16,6 +16,7 @@ export type PostMetaData = {
     author?: string
     publishedAt?: string
     slug: string
+    tags?: string[]
 }
 
 export async function getPostBySlug(slug: string) : Promise<Post | null> {

@@ -6,6 +6,7 @@ import Image from "next/image";
 import { formatDate } from "@/lib/utils";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import MDXContent from "@/components/mdx-content";
+import SEO from "@/components/seo";
 
 export const generateStaticParams = async () => {
     const projects = await getAllProjects()
@@ -26,11 +27,16 @@ export default async function Project({params} : {params: {slug: string}} ){
     }
 
     const { metadata, content } = project
-    const {title, image, author, publishedAt } = metadata
+    const {title, image, author, publishedAt, summary, tags} = metadata
     console.log('publishedAt:', publishedAt)
     
     return (
         <section className="pb-24 pt-32">
+            <SEO
+                title={title ?? ""}
+                description={summary ?? ""}
+                tags={tags}
+            />
             <div className="container px-4 mx-auto  max-w-3xl">
                 <Link
                 href="/projects"
@@ -59,6 +65,7 @@ export default async function Project({params} : {params: {slug: string}} ){
                 </header>
 
                 <main className="prose mt-16 dark:prose-invert">
+
                     <MDXContent source={content} />
                 </main>
 

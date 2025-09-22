@@ -7,6 +7,8 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { formatDate } from "@/lib/utils";
 import { ArrowLeftIcon } from "@radix-ui/react-icons";
 import MDXContent from "@/components/mdx-content";
+import SEO from "@/components/seo";
+import type { Metadata } from "next";
 
 export const generateStaticParams = async () => {
     const posts = await getAllPosts()
@@ -27,11 +29,37 @@ export default async function Post({params} : {params: {slug: string}} ){
     }
 
     const { metadata, content } = post
-    const {title, image, author, publishedAt } = metadata
+    const {title, image, author, publishedAt, summary, tags } = metadata
     console.log('publishedAt:', publishedAt)
+
+    // const {
+    //     title: postTitle,
+    //     image,
+    //     author,
+    //     publishedAt,
+    //     summary,
+    //     tags
+    // }: {
+    //     title: string;
+    //         <SEO
+    //             title={postTitle ?? "post"}
+    //             description={summary ?? ""}
+    //             tags={tags}
+    //         />
+    // } = metadata
+    // console.log('publishedAt:', publishedAt)
+
+    // const pageMetadata: Metadata = {
+    //     title: postTitle,
+    // }
     
     return (
         <section className="pb-24 pt-32">
+            <SEO
+                title={title ?? "post"}
+                description={summary ?? ""}
+                tags={tags}
+            />
             <div className="container px-4 mx-auto  max-w-3xl">
                 <Link
                 href="/posts"

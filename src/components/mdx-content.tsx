@@ -20,15 +20,15 @@ const components = {
         <h2 {...props}  className="text-2xl text-muted-foreground font-bold mt-8 mb-4"
         >{props.children}</h2>
     ),
-    p : (props: React.HTMLAttributes<HTMLHeadingElement> & { children: ReactNode }) => (
+    p : (props: React.HTMLAttributes<HTMLParagraphElement> & { children: ReactNode }) => (
         <p {...props}  className="my-2"
         >{props.children}</p>
     ),
-    a : (props: React.HTMLAttributes<HTMLHeadingElement> & { children: ReactNode }) => (
+    a : (props: React.HTMLAttributes<HTMLAnchorElement> & { children: ReactNode }) => (
         <a {...props}  className="font-light text-muted-foreground transition-colors hover:text-foreground underline"
         >{props.children}</a>
     ),
-    img : (props: React.HTMLAttributes<HTMLHeadingElement> & { children: ReactNode }) => (
+    img : (props: React.HTMLAttributes<HTMLImageElement> & { children: ReactNode }) => (
         <img {...props}  className="my-2 rounded-lg"
         />
     ),

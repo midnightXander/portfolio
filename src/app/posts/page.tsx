@@ -1,5 +1,6 @@
 import Posts from '@/components/posts'
 import PostsWithSearch from '@/components/posts-with-search'
+import SEO from '@/components/seo'
 import { getAllPosts } from '@/lib/posts'
 import React from 'react'
 
@@ -8,6 +9,7 @@ export default async function PostsPage(){
     
     return (
         <section className='pb-24 pt-40'>
+            
             <div className='container mx-auto px-4 max-w-3xl'>
                 <header className="mb-12">
                     <h1 className="title">Posts</h1>

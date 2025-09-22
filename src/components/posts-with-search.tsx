@@ -23,6 +23,7 @@ export default function PostsWithSearch({posts} : {posts : PostMetaData[]}){
 
     return(
         <div>
+            
             <div className="mb-12 items-center gap-3">
                 <Input
                 type="text"
