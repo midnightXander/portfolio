@@ -1,0 +1,191 @@
+---
+title: How to Build a Modern, SEO-Optimized Developer Portfolio with Next.js and MDX
+summary: Learn how to create a high-performing, SEO-friendly developer portfolio using Next.js and MDX. This guide covers best practices for structure, content, performance, and discoverability to help you stand out to recruiters and clients.
+image: /images/posts/3b2c3200-dbe4-11ea-8f54-98158727d29b.png
+author: Ngaikam Alex
+publishedAt: '2025-09-22'
+tags: [nextjs, mdx, portfolio, seo, web development, react, developer]
+---
+
+# How to Build a Modern, SEO-Optimized Developer Portfolio with Next.js and MDX
+
+A developer portfolio is more than just a collection of your projects—it's your digital identity, your resume, and your personal brand all in one. In today's competitive tech landscape, having a portfolio that is both visually appealing and optimized for search engines (SEO) can make a significant difference in attracting recruiters, clients, and collaborators.
+
+In this article, you'll learn how to build a modern, SEO-optimized developer portfolio using [Next.js](https://nextjs.org/) and [MDX](https://mdxjs.com/). We'll cover everything from project structure and content strategy to technical SEO and performance best practices.
+
+---
+
+## Why Next.js and MDX?
+
+**Next.js** is a powerful React framework that enables server-side rendering, static site generation, and excellent performance out of the box. **MDX** allows you to write JSX in Markdown, making it easy to create rich, interactive content for your blog or project pages.
+
+Combining these technologies gives you:
+
+- **Blazing fast performance** (great for SEO and user experience)
+- **Flexible content authoring** with Markdown and React components
+- **Built-in SEO features** like dynamic meta tags, sitemaps, and structured data
+- **Easy deployment** to platforms like Vercel or Netlify
+
+---
+
+## 1. Structuring Your Portfolio for SEO
+
+A well-structured portfolio helps both users and search engines navigate your content. Here’s how to organize your site:
+
+### Recommended Structure
+
+```
+/
+|-- pages/
+|   |-- index.tsx         # Home page
+|   |-- about.tsx         # About you
+|   |-- projects/         # Project case studies
+|   |-- blog/             # Blog articles
+|-- components/           # Reusable UI components
+|-- public/               # Static assets (images, favicon, etc.)
+|-- src/content/          # MDX content (posts, projects)
+```
+
+### Key Pages
+
+- **Home:** Brief intro, featured projects, and links to blog/about.
+- **About:** Your background, skills, and contact info.
+- **Projects:** Detailed case studies with images, tech stack, and outcomes.
+- **Blog:** Technical articles, tutorials, and thought leadership.
+
+---
+
+## 2. Writing SEO-Friendly Content with MDX
+
+MDX lets you combine Markdown simplicity with React power. For SEO, focus on:
+
+- **Clear, descriptive titles** (use `<h1>`, `<h2>`, etc.)
+- **Keyword-rich summaries** (but avoid keyword stuffing)
+- **Internal links** to related projects or posts
+- **Alt text** for all images
+- **Structured data** (JSON-LD for articles/projects)
+
+**Example MDX Frontmatter:**
+
+```mdx
+---
+title: Building a REST API with Django
+summary: Step-by-step guide to creating a RESTful API using Django and Django REST Framework.
+image: /images/posts/django-rest-api.webp
+author: Ngaikam Alex
+publishedAt: '2025-09-10'
+tags: [django, rest api, backend, python]
+---
+```
+
+---
+
+## 3. Technical SEO Best Practices
+
+### Meta Tags
+
+Use Next.js’s `<Head>` component to set dynamic meta tags for each page:
+
+```tsx
+import Head from 'next/head';
+
+export default function ProjectPage({ title, description }) {
+  return (
+    <>
+      <Head>
+        <title>{title} | Your Name</title>
+        <meta name="description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        {/* Add more Open Graph/Twitter tags as needed */}
+      </Head>
+      {/* ... */}
+    </>
+  );
+}
+```
+
+### Sitemap and Robots.txt
+
+Generate a sitemap.xml and robots.txt to help search engines crawl your site. Use packages like `next-sitemap` for automation.
+
+### Structured Data
+
+Add JSON-LD structured data for articles and projects to enhance search result appearance:
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Building a REST API with Django",
+  "author": "Ngaikam Alex",
+  "datePublished": "2025-09-10",
+  "image": "/images/posts/django-rest-api.webp"
+}
+```
+
+---
+
+## 4. Performance Optimization
+
+Site speed is a ranking factor for SEO. Next.js helps with:
+
+- **Image Optimization:** Use `next/image` for responsive, lazy-loaded images.
+- **Code Splitting:** Automatic with Next.js for faster initial loads.
+- **Static Generation:** Use `getStaticProps` and `getStaticPaths` for static content.
+- **Caching:** Leverage CDN and HTTP caching headers.
+
+**Example:**
+
+```tsx
+import Image from 'next/image';
+
+<Image
+  src="/images/projects/portfolio-cover.webp"
+  alt="Screenshot of my portfolio"
+  width={800}
+  height={400}
+  priority
+/>
+```
+
+---
+
+## 5. Accessibility and UX
+
+Accessible sites rank better and reach more users. Ensure:
+
+- Proper heading hierarchy (`<h1>`, `<h2>`, etc.)
+- Sufficient color contrast
+- Keyboard navigation support
+- Descriptive link text
+
+---
+
+## 6. Content Ideas to Boost Your Portfolio SEO
+
+- **Case studies:** Deep dives into your best projects, including challenges and results.
+- **Technical tutorials:** Share your expertise on frameworks, tools, or languages.
+- **Career advice:** Write about your journey, tips for interviews, or remote work.
+- **Open source contributions:** Document your involvement and impact.
+
+---
+
+## 7. Promoting and Tracking Your Portfolio
+
+- **Share on social media** (Twitter, LinkedIn, Dev.to)
+- **Engage in developer communities** (Reddit, Hashnode, GitHub)
+- **Add Google Analytics** or Plausible for traffic insights
+- **Collect testimonials** from clients or colleagues
+
+---
+
+## Conclusion
+
+A modern, SEO-optimized developer portfolio built with Next.js and MDX can set you apart in the tech industry. By focusing on structure, content quality, technical SEO, and performance, you’ll create a site that not only looks great but also ranks well and attracts the right opportunities.
+
+Ready to build your own? Start with Next.js, add MDX, and showcase your story to the world!
+
+---
+
+*Have questions or want to see more portfolio tips? [Contact me](mailto:alexngaikama913@gmail.com) or check

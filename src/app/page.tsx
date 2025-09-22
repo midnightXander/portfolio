@@ -2,6 +2,7 @@ import Intro from "../components/intro";
 import RecentPosts from "@/components/recent-posts";
 import RecentProjects from "@/components/recent-projects";
 import NewsletterForm from "@/components/newsletter-form";
+import StackList from "@/components/stacklist";
 
 export default function Home() {
 
@@ -12,6 +13,8 @@ export default function Home() {
    <section className = 'py-24'>
     <div className="container mx-auto max-w-3xl px-4">
       <Intro />
+
+      <StackList />
 
       <RecentPosts />
 

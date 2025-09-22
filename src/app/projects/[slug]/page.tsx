@@ -18,7 +18,7 @@ export const generateStaticParams = async () => {
 export default async function Project({params} : {params: {slug: string}} ){
     const {slug} = await params
     const project = await getProjectBySlug(slug)
-    console.log('Fetched Project for slug:', slug, project)
+    //console.log('Fetched Project for slug:', slug, project)
 
     if(!project){
         console.log('project not found:', slug)

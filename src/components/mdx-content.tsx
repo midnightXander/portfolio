@@ -16,6 +16,22 @@ const components = {
         <h1 {...props}  className="text-3xl font-bold mt-8 mb-4"
         >{props.children}</h1>
     ),
+    h2 : (props: React.HTMLAttributes<HTMLHeadingElement> & { children: ReactNode }) => (
+        <h2 {...props}  className="text-2xl text-muted-foreground font-bold mt-8 mb-4"
+        >{props.children}</h2>
+    ),
+    p : (props: React.HTMLAttributes<HTMLHeadingElement> & { children: ReactNode }) => (
+        <p {...props}  className="my-2"
+        >{props.children}</p>
+    ),
+    a : (props: React.HTMLAttributes<HTMLHeadingElement> & { children: ReactNode }) => (
+        <a {...props}  className="font-light text-muted-foreground transition-colors hover:text-foreground underline"
+        >{props.children}</a>
+    ),
+    img : (props: React.HTMLAttributes<HTMLHeadingElement> & { children: ReactNode }) => (
+        <img {...props}  className="my-2 rounded-lg"
+        />
+    ),
     Counter
 }
 
