@@ -24,6 +24,23 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Alex portfolio",
   description: "Portfolio of Alex, software engineer, tech enthusiast and marketing specialist.",
+  icons: {
+    icon: "/favicon.ico", // or "/icon.png"
+  },
+  // openGraph: {
+  //   images: [
+  //     {
+  //       url: "/images/authors/avatar-8.jpg", // Path to your OG image in /public
+  //       width: 1200,
+  //       height: 630,
+  //       alt: "Alex Portfolio Preview",
+  //     },
+  //   ],
+  // },
+  // twitter: {
+  //   card: "summary_large_image",
+  //   images: ["/images/authors/avatar-8.jpg"],
+  // },
 };
 
 export default function RootLayout({
